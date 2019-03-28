@@ -1,0 +1,45 @@
+<style lang="less" scoped>
+  .dict {
+    .hd {
+      background: #eee;
+    }
+    .list {
+      display: flex;
+      .item {
+        width: 80px;
+        height: 80px;
+        background: #eee;
+        margin: 20px 20px 20px 0;
+        padding: 10px;
+        font-size: 12px;
+        color:cadetblue;
+      }
+    }
+  }
+</style>
+
+<template>
+  <view class="container dict">
+    <view class="layout">
+      <view class="hd">我的词典</view>
+      <view class="list">
+        <view class="item">日常高频词汇</view>
+        <view class="item">PETS3级核心3000词</view>
+      </view>
+    </view>
+    <view class="layout">
+      <view class="hd">PETS</view>
+      <view class="list">
+        <view class="item">PETS3级核心3000词</view>
+        <view class="item">PETS4级核心5000词</view>
+      </view>
+    </view>
+    <view class="layout">
+      <view class="hd">四六八级</view>
+      <view class="list">
+        <view class="item">四级核心3000词</view>
+        <view class="item">六级核心5000词</view>
+      </view>
+    </view>
+  </view>
+</template>

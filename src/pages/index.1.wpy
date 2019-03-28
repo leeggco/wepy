@@ -17,31 +17,6 @@
 </style>
 <template>
   <view class="container">
-    <view class="info-hd">
-      <image
-        style="width: 375px; height: 260px; background-color: #eeeeee;"
-        mode="aspectFill"
-        src="http://ww1.sinaimg.cn/large/885dc2e9ly1g1immeiykcj20sg0miwhb.jpg"
-      ></image>
-    </view>
-    <view class="list" style="height: 500px; line-height: 80px; text-align: left">
-      <navigator
-        url="/pages/practice"
-        hover-class="navigator-hover">
-        开始练习
-      </navigator>
-      <navigator
-        url="/pages/dictionary"
-        hover-class="navigator-hover">
-        选择词典
-      </navigator>
-      <navigator
-        url="/pages/setting"
-        hover-class="navigator-hover">
-        设置
-      </navigator>
-      <view></view>
-    </view>
     <view class="userinfo" @tap="handleViewTap">
       <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"/>
       <view class="userinfo-nickname">{{ userInfo.nickName }}</view>
@@ -97,7 +72,7 @@
     </panel>
 
     <panel>
-      <view class="title" slot="title">测试列表ss</view>
+      <view class="title" slot="title">测试列表</view>
       <list></list>
     </panel>
 

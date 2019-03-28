@@ -1,0 +1,63 @@
+<style lang="less">
+
+</style>
+
+<template>
+  <view class="container">
+    <view class="word">
+      <view>abandon</view>
+      <view>美 /ə'bændən/ </view>
+    </view>
+    <view class="Interpretation">
+      <view>释义</view>
+      <view>n. 放任；狂热</view>
+      <view>vt. 遗弃；放弃</view>
+      
+      <view>列句</view>
+      <view>1.Would you abandon them for that? </view>
+      <view>你为了这点就要放弃他们吗？</view>
+      <view>2.I can not abandon my major.</view>
+      <view>我不能放弃我的主修科。</view>
+    </view>
+    <view class="operating" style="margin-top:20px;">
+      <button
+        type="default"
+        size="mini"
+        hover-class="other-button-hover">
+        显示释义
+      </button>
+
+      <button
+        type="default"
+        size="mini"
+        hover-class="other-button-hover">
+        发音
+      </button>
+    </view>
+    <view class="score">
+      <button
+        type="default"
+        size="mini"
+        hover-class="other-button-hover">
+        生疏/错误
+      </button>
+      <button
+        type="default"
+        size="mini"
+        hover-class="other-button-hover">
+        困难/模糊
+      </button><button
+        type="default"
+        size="mini"
+        hover-class="other-button-hover">
+        犹豫/想起
+      </button>
+      <button
+        type="default"
+        size="mini"
+        hover-class="other-button-hover">
+        顺利/正确
+      </button>
+    </view>
+  </view>
+</template>
