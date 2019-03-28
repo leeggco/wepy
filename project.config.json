@@ -10,6 +10,7 @@
 	"compileType": "miniprogram",
 	"appid": "wx5284067c25a10965",
 	"projectname": "myproject",
-	"miniprogramRoot": "dist/",
+	"miniprogramRoot": "./dist/",
+	"cloudfunctionRoot": "./cloudfunctions",
 	"condition": {}
 }
