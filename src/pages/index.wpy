@@ -274,6 +274,12 @@
 
         self.$apply()
       })
+      const db = wx.cloud.database()
+      db.collection('ice_words').get({
+        success: res => {
+          console.log(res)
+        }
+      })
     }
   }
 </script>

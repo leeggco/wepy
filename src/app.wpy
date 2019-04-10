@@ -14,13 +14,15 @@ import configStore from './store'
 const store = configStore()
 setStore(store)
 // 初始化云开发
-wx.cloud.init()
+wx.cloud.init({
+  traceUser: true
+})
 export default class extends wepy.app {
   config = {
     pages: [
       'pages/index',
-      'pages/dictionary',
       'pages/practice',
+      'pages/dictionary',
       'pages/setting'
     ],
     window: {
