@@ -23,23 +23,29 @@
     <view class="layout">
       <view class="hd">我的词典</view>
       <view class="list">
-        <view class="item">日常高频词汇</view>
-        <view class="item">PETS3级核心3000词</view>
-      </view>
-    </view>
-    <view class="layout">
-      <view class="hd">PETS</view>
-      <view class="list">
-        <view class="item">PETS3级核心3000词</view>
-        <view class="item">PETS4级核心5000词</view>
-      </view>
-    </view>
-    <view class="layout">
-      <view class="hd">四六八级</view>
-      <view class="list">
-        <view class="item">四级核心3000词</view>
-        <view class="item">六级核心5000词</view>
+        <view class="item" wx:for="{{ listData }}">
+          {{ item.name }}
+        </view>
       </view>
     </view>
   </view>
 </template>
+<script>
+  import wepy from 'wepy'
+  export default class Index extends wepy.page {
+    data = {
+      listData: []
+    }
+    onLoad() {
+      const db = wx.cloud.database()
+      db.collection('ice_word_category').get({
+        success: res => {
+          console.log(res)
+          this.setData({
+            listData: res.data
+          })
+        }
+      })
+    }
+  }
+</script>
