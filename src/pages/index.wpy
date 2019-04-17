@@ -18,11 +18,12 @@
 <template>
   <view class="container">
     <view class="info-hd">
-      <image
+      <!-- <image
         style="width: 375px; height: 260px; background-color: #eeeeee;"
         mode="aspectFill"
         src="http://ww1.sinaimg.cn/large/885dc2e9ly1g1immeiykcj20sg0miwhb.jpg"
-      ></image>
+      ></image> -->
+
     </view>
     <view class="list" style="height: 500px; line-height: 80px; text-align: left">
       <navigator
@@ -264,6 +265,7 @@
         if (userInfo) {
           self.userInfo = userInfo
         }
+        console.log(userInfo)
         self.normalTitle = '标题已被修改'
 
         self.setTimeoutTitle = '标题三秒后会被修改'
@@ -273,6 +275,19 @@
         }, 3000)
 
         self.$apply()
+      })
+      // 获取用户信息
+      wx.getSetting({
+        success: res => {
+          if (res.authSetting['scope.userInfo']) {
+            // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+            wx.getUserInfo({
+              success: res => {
+                console.log(res)
+              }
+            })
+          }
+        }
       })
       const db = wx.cloud.database()
       db.collection('ice_words').get({
